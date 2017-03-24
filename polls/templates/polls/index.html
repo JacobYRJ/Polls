@@ -1,7 +1,7 @@
 {% if latest_question_list %}
 	<ul>
 	{% for question in latest_question_list %}
-		<il><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }} {{ question.pub_date }} </a></il>        <!-- href为超链接， question.question_text为调用数据库中的内容-->
+		<il><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }} -- {{ question.pub_date }} </a></il>        <!-- href为超链接， question.question_text为调用数据库中的内容-->
 	{% endfor %}
 	</ul>
 {% else %}
